@@ -1,0 +1,285 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f6fc;
+  color: #222;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* ===== CARD CONTAINER ===== */
+.main-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+}
+
+/* ===== LEFT PANEL ===== */
+.left-panel {
+  flex: 1;
+  padding: 30px;
+  border-right: 1px solid #e5e8ef;
+}
+
+.left-panel h2 {
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.tab {
+  flex: 1;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #f0f2f7;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.tab.active {
+  background: #007bff;
+  color: #fff;
+}
+
+/* ===== TEXTAREA ===== */
+textarea {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  border: 1px solid #d0d4e4;
+  padding: 10px;
+  font-size: 14px;
+  resize: vertical;
+}
+
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.hint {
+  font-size: 12px;
+  color: #777;
+  margin-top: 5px;
+}
+
+/* ===== PREFERENCES ===== */
+.preferences {
+  margin-top: 20px;
+  background: #f8faff;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.pref-row {
+  margin-bottom: 15px;
+}
+
+.number-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.number-control button {
+  width: 30px;
+  height: 30px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.subtext {
+  font-size: 12px;
+  color: #777;
+}
+
+/* ===== SWITCH ===== */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 25px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 4px;
+  bottom: 3.5px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #007bff;
+}
+
+input:checked + .slider:before {
+  transform: translateX(18px);
+}
+
+/* ===== BUTTONS ===== */
+.primary-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.primary-btn:hover {
+  background: #0056b3;
+}
+
+.secondary-btn {
+  background: #e5e8ef;
+  color: #333;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: 0.2s;
+}
+
+.secondary-btn:hover {
+  background: #d8dbe4;
+}
+
+.action-buttons {
+  margin-top: 20px;
+}
+
+/* ===== RIGHT PANEL ===== */
+.right-panel {
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* 🔥 centers content vertically */
+  gap: 20px; /* spacing between image & button */
+  background: #fff;
+}
+
+/* ===== OUTPUT (word cloud box) ===== */
+#output {
+  width: 100%;
+  max-width: 500px;
+  background: #f9faff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 300px; /* gives nice height balance */
+}
+
+#output img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: none; /* hidden initially */
+}
+
+.placeholder {
+  color: #888;
+  font-size: 15px;
+}
+
+/* ===== DOWNLOAD SECTION ===== */
+.download-section {
+  text-align: center;
+}
+
+#downloadBtn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#downloadBtn:hover {
+  background: #0056b3;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .card {
+    flex-direction: column;
+  }
+
+  .left-panel {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+  }
+
+  .right-panel {
+    padding-top: 15px;
+  }
+
+  .action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+}

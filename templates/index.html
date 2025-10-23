@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Word Cloud Generator</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="main-container">
+    <div class="card">
+      <div class="left-panel">
+        <h2>🧠 Add your text</h2>
+
+        <div class="tabs">
+          <button class="tab active" id="pasteTab">Paste/Type text</button>
+          <button class="tab" id="uploadTab">Upload a file</button>
+        </div>
+
+        <!-- Paste text area -->
+        <textarea id="textInput" placeholder="Paste or type your text here..."></textarea>
+
+        <!-- File upload -->
+        <input type="file" id="fileInput" accept=".txt" style="display:none;" />
+
+        <p class="hint">Enter up to 10,000 words</p>
+
+        <!-- Preferences -->
+        <div class="preferences">
+          <h3>Set your preferences</h3>
+
+          <div class="pref-row">
+            <label>Number of words</label>
+            <div class="number-control">
+              <button id="minusBtn">−</button>
+              <span id="wordCount">100</span>
+              <button id="plusBtn">+</button>
+            </div>
+            <p class="subtext">Display up to 200 words</p>
+          </div>
+
+          <div class="pref-row">
+            <label>Stop words</label>
+            <label class="switch">
+              <input type="checkbox" id="stopwordToggle" checked>
+              <span class="slider"></span>
+            </label>
+            <p class="subtext">Hide common words like 'the', 'for', and 'and'.</p>
+          </div>
+        </div>
+
+        <div class="action-buttons">
+          <button id="generateBtn" class="primary-btn">Generate</button>
+          <button id="clearBtn" class="secondary-btn">Start Over</button>
+        </div>
+      </div>
+
+      <div class="right-panel">
+  <div id="output">
+    <p class="placeholder">Your word cloud will appear here 👇</p>
+    <img id="wordcloudImage" src="" alt="Word Cloud" />
+  </div>
+
+  <div class="download-section">
+    <button id="downloadBtn" class="primary-btn" style="display:none;">⬇️ Download</button>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

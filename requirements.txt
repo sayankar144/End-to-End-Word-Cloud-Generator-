@@ -1,0 +1,7 @@
+flask
+flask-cors
+wordcloud
+matplotlib
+pillow
+nltk
+gunicorn
