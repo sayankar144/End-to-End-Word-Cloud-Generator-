@@ -1,0 +1,11 @@
+# Ignore generated word cloud images
+static/wordclouds/
+
+# Ignore Python cache and environment folders
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+.env/
+.DS_Store

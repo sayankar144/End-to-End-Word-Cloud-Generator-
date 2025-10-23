@@ -20,8 +20,24 @@
         <!-- Paste text area -->
         <textarea id="textInput" placeholder="Paste or type your text here..."></textarea>
 
-        <!-- File upload -->
-        <input type="file" id="fileInput" accept=".txt" style="display:none;" />
+        <!-- Modern file upload -->
+        <div id="uploadArea" class="upload-area hidden">
+          <label class="upload-box" id="uploadBox">
+            <input type="file" id="fileInput" accept=".txt" />
+            <div class="upload-inner">
+              <div class="upload-icon">📁</div>
+              <div class="upload-text">
+                <strong>Drag & drop a .txt file here</strong>
+                <div class="muted">or click to browse</div>
+              </div>
+            </div>
+          </label>
+
+          <div id="fileInfo" class="file-info" style="display:none;">
+            <div class="file-name" id="fileName"></div>
+            <button id="removeFileBtn" class="secondary-btn small">Remove</button>
+          </div>
+        </div>
 
         <p class="hint">Enter up to 10,000 words</p>
 
@@ -56,16 +72,15 @@
       </div>
 
       <div class="right-panel">
-  <div id="output">
-    <p class="placeholder">Your word cloud will appear here 👇</p>
-    <img id="wordcloudImage" src="" alt="Word Cloud" />
-  </div>
+        <div id="output">
+          <p class="placeholder">Your word cloud will appear here 👇</p>
+          <img id="wordcloudImage" src="" alt="Word Cloud" />
+        </div>
 
-  <div class="download-section">
-    <button id="downloadBtn" class="primary-btn" style="display:none;">⬇️ Download</button>
-  </div>
-</div>
-
+        <div class="download-section">
+          <button id="downloadBtn" class="primary-btn" style="display:none;">⬇️ Download</button>
+        </div>
+      </div>
     </div>
   </div>
 

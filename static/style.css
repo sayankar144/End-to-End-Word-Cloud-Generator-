@@ -85,6 +85,72 @@ textarea:focus {
   margin-top: 5px;
 }
 
+/* ===== UPLOAD AREA (modern) ===== */
+.upload-area {
+  margin-top: 12px;
+}
+
+.upload-box {
+  display: block;
+  border-radius: 12px;
+  border: 2px dashed #d7e0f7;
+  padding: 18px;
+  cursor: pointer;
+  text-align: center;
+  background: linear-gradient(180deg, #ffffff, #fbfdff);
+  transition: all 0.18s ease;
+}
+
+.upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,123,255,0.08);
+}
+
+.upload-box.dragover {
+  border-color: #007bff;
+  background: linear-gradient(180deg, #f0f6ff, #eef7ff);
+}
+
+.upload-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.upload-icon {
+  font-size: 28px;
+}
+
+.upload-text .muted {
+  font-size: 12px;
+  color: #666;
+}
+
+/* ===== FILE INFO ===== */
+.file-info {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.file-name {
+  background: #f1f6ff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #0747a6;
+  max-width: 70%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 /* ===== PREFERENCES ===== */
 .preferences {
   margin-top: 20px;
@@ -192,6 +258,11 @@ input:checked + .slider:before {
   transition: 0.2s;
 }
 
+.secondary-btn.small {
+  padding: 6px 10px;
+  font-size: 13px;
+}
+
 .secondary-btn:hover {
   background: #d8dbe4;
 }
@@ -207,8 +278,8 @@ input:checked + .slider:before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* 🔥 centers content vertically */
-  gap: 20px; /* spacing between image & button */
+  justify-content: center;
+  gap: 20px;
   background: #fff;
 }
 
@@ -225,7 +296,7 @@ input:checked + .slider:before {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 300px; /* gives nice height balance */
+  min-height: 300px;
 }
 
 #output img {
@@ -233,7 +304,7 @@ input:checked + .slider:before {
   height: auto;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  display: none; /* hidden initially */
+  display: none;
 }
 
 .placeholder {
@@ -261,7 +332,6 @@ input:checked + .slider:before {
   background: #0056b3;
 }
 
-
 /* ===== RESPONSIVE ===== */
 @media (max-width: 900px) {
   .card {
@@ -283,3 +353,6 @@ input:checked + .slider:before {
     gap: 10px;
   }
 }
+
+/* helper hidden class */
+.hidden { display: none; }
